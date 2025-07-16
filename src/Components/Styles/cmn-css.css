@@ -1,0 +1,33 @@
+body {
+  --heading-font: "Jost", sans-serif;
+  --bs-body-font-family: "Jost", Roboto, sans-serif;
+}
+.main-btn {
+  padding: 10px 12px;
+  border-radius: 26px;
+  width: 100%;
+  background: linear-gradient(to bottom, #111111 50%, #fff 50%);
+  background-size: 100% 200%;
+  background-position: bottom;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  transition: background-position 0.4s ease, color 0.4s ease;
+}
+.main-btn:hover {
+  background-position: top;
+  color: white;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #000000 !important; /* or white if on dark bg */
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+}
+
+input:-webkit-autofill::first-line {
+  font-family: inherit;
+}

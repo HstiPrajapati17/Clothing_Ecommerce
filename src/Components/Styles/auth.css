@@ -1,0 +1,226 @@
+/* Fullscreen background */
+body {
+  color: #000;
+}
+.form-group input::placeholder {
+  color: #0000009d;
+}
+
+.signin-page {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-bg {
+  position: relative;
+  background-image: url(https://img.freepik.com/premium-photo/background-corridor-modern-shopmotion-blur_43963-2746.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Black overlay on background image */
+.page-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
+  z-index: 0;
+}
+
+/* Right-side black blur box */
+.signin-overlay {
+  width: 500px;
+  height: auto;
+  background: rgb(0 0 0 / 24%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #aaaaaa4f;
+  font-family: var(--heading-font);
+  z-index: 1;
+}
+
+.signin-form {
+  width: 100%;
+}
+
+/* Form Styles */
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 9px 0px 6px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.form-options a {
+  text-decoration: underline;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  position: relative;
+  padding-left: 30px;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox .checkmark {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.custom-checkbox.checked .checkmark {
+  background-color: black;
+  border-color: black;
+}
+
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 0px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox.checked .checkmark::after {
+  display: block;
+}
+
+.register-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.register-text a {
+  text-decoration: underline;
+}
+.separator {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+.separator span {
+  font-size: 20px;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+.separator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #aaa;
+  z-index: 0;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  border-radius: 26px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #f3f3f3;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-bg {
+    justify-content: center;
+  }
+
+  .signin-overlay {
+    max-width: 90%;
+    padding: 2rem 1.5rem;
+    backdrop-filter: blur(15px);
+  }
+}
