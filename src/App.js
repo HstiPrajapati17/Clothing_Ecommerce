@@ -5,6 +5,7 @@ import SignUp from "./Components/Auth/SignUp";
 import ForgetPass from "./Components/Auth/ForgetPass";
 import Otp from "./Components/Auth/OTP";
 import ChangePass from "./Components/Auth/ChangePass";
+import HomePage from "./Components/HomePage/HomePage";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Route path="/forgetpass" element={<ForgetPass />} />
       <Route path="/otp-verify" element={<Otp />} />
       <Route path="/change-pass" element={<ChangePass />} />
+      <Route path="/home" element={<HomePage />} />
+
 
     </Routes>
   );

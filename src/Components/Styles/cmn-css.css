@@ -1,6 +1,6 @@
 body {
   --heading-font: "Jost", sans-serif;
-  --bs-body-font-family: "Jost", Roboto, sans-serif;
+  font-family: "Jost", sans-serif;
 }
 .main-btn {
   padding: 10px 12px;
@@ -18,12 +18,24 @@ body {
   background-position: top;
   color: white;
 }
+.title-btn {
+  padding: 10px 12px;
+  border-radius: 26px;
+  width: 50%;
+  background: #fff;
+  opacity: 0.8;
+  color: #000;
+  transition: 0.5s;
+}
+.title-btn:hover{
+  background-color: black;
+  color: #fff;
+}
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
   -webkit-text-fill-color: #000000 !important; /* or white if on dark bg */
   transition: background-color 9999s ease-in-out 0s;
 }
-
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
 }

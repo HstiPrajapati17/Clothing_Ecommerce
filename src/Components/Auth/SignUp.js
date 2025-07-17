@@ -1,12 +1,55 @@
 import React, { useState } from "react";
 import "../Styles/auth.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const [checked, setChecked] = useState(false);
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    password: "",
+  });
 
-  const toggleCheckbox = () => {
-    setChecked(!checked);
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const validate = () => {
+    let formErrors = {};
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!formData.fname.trim()) {
+      formErrors.fname = "First name is required";
+    }
+    if (!formData.lname.trim()) {
+      formErrors.lname = "Last name is required";
+    }
+    if (!formData.email.trim()) {
+      formErrors.email = "Email is required";
+    } else if (!emailPattern.test(formData.email)) {
+      formErrors.email = "Invalid email format";
+    }
+    if (!formData.password) {
+      formErrors.password = "Password is required";
+    } else if (formData.password.length < 6) {
+      formErrors.password = "Password must be at least 6 characters";
+    }
+
+    return formErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      console.log("Form submitted:", formData);
+      navigate("/"); // Redirect to sign-in or home
+    }
   };
 
   return (
@@ -17,23 +60,33 @@ const SignUp = () => {
             <div className="signin-form">
               <h2 className="jost-font leading-[40px]">Create Your Account</h2>
               <p>Hello! let's join with us</p>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="flex-wrap sm:flex-nowrap flex justify-between align-center sm:gap-6">
                   <div className="form-group w-full sm:w-1/2">
                     <label htmlFor="fname">First Name</label>
                     <input
                       type="text"
                       id="fname"
+                      value={formData.fname}
+                      onChange={handleChange}
                       placeholder="enter first name"
                     />
+                    {errors.fname && (
+                      <span className="error-text">{errors.fname}</span>
+                    )}
                   </div>
                   <div className="form-group w-full sm:w-1/2">
                     <label htmlFor="lname">Last Name</label>
                     <input
                       type="text"
                       id="lname"
+                      value={formData.lname}
+                      onChange={handleChange}
                       placeholder="enter last name"
                     />
+                    {errors.lname && (
+                      <span className="error-text">{errors.lname}</span>
+                    )}
                   </div>
                 </div>
 
@@ -42,21 +95,30 @@ const SignUp = () => {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="enter your e-mail"
                   />
+                  {errors.email && (
+                    <span className="error-text">{errors.email}</span>
+                  )}
                 </div>
+
                 <div className="form-group">
                   <label htmlFor="password">Password</label>
                   <input
                     type="password"
                     id="password"
+                    value={formData.password}
+                    onChange={handleChange}
                     placeholder="enter your password"
                   />
+                  {errors.password && (
+                    <span className="error-text">{errors.password}</span>
+                  )}
                 </div>
 
-                <button type="submit" className="main-btn">
-                  <Link>Sign Up</Link>
-                </button>
+                <button type="submit" className="main-btn">Sign Up</button>
 
                 {/* OR Separator */}
                 <div className="separator">
@@ -74,7 +136,7 @@ const SignUp = () => {
                 </button>
 
                 <p className="register-text">
-                  Already have an account? <Link to={"/"}>SignIn</Link>
+                  Already have an account? <Link to="/">SignIn</Link>
                 </p>
               </form>
             </div>
