@@ -105,7 +105,7 @@ const Header = () => {
 
 	return (
 		<>
-			<header className='bg-gray-300'>
+			<header className='bg-[#d1d5db96]'>
 				<div className='p-4 md:max-w-2xl lg:max-w-4xl xl:max-w-7xl w-full mx-auto'>
 					<div className='flex justify-between items-center'>
 						<div className='logo order-2 md:order-1'>

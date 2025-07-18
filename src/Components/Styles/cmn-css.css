@@ -18,6 +18,17 @@ body {
   background-position: top;
   color: white;
 }
+.main-btn2 {
+  background: linear-gradient(to bottom, #111111 50%, #fff 50%);
+  border: 1px solid #747474;
+  background-size: 100% 200%;
+  background-position: bottom;
+  color: #000;
+}
+.main-btn2:hover {
+  background-position: top;
+  color: #fff;
+}
 .title-btn {
   padding: 10px 12px;
   border-radius: 26px;
@@ -27,7 +38,7 @@ body {
   color: #000;
   transition: 0.5s;
 }
-.title-btn:hover{
+.title-btn:hover {
   background-color: black;
   color: #fff;
 }
@@ -42,4 +53,14 @@ input:-webkit-autofill:focus {
 
 input:-webkit-autofill::first-line {
   font-family: inherit;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.section-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
 }

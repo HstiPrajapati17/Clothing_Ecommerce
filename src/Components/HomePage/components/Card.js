@@ -4,7 +4,7 @@ import "../../Styles/home-page.css"
 import men from "../../Assets/Images/image7.jpg";
 import women from "../../Assets/Images/image.jpg";
 import couple from "../../Assets/Images/couple4.jpg";
-import { Cmn_title_btn } from "../../Assets/cmn_components/Cmn_comp";
+import { Cmn_section_title, Cmn_title_btn } from "../../Assets/cmn_components/Cmn_comp";
 
 const collections = [
 	{ name: "Men", img: men },
@@ -12,13 +12,14 @@ const collections = [
 	{ name: "Couple", img: couple },
 ];
 
-const TopCollections = () => {
+const Cards = () => {
 	return (
 		<section className="top-collections relative max-w-7xl mx-auto">
-			<h2 className="title">Categories</h2>
+			<Cmn_section_title main_title={"Categories"} title_des={"Express your style with our standout collection—fashion meets sophistication."} />
+			{/* <h2 className="title">Categories</h2>
 			<p className="subtitle">
 				Express your style with our standout collection—fashion meets sophistication.
-			</p>
+			</p> */}
 			<div className="collection-grid">
 				{collections.map((item, index) => (
 					<div className="collection-card" key={index}>
@@ -31,4 +32,4 @@ const TopCollections = () => {
 	);
 };
 
-export default TopCollections;
+export default Cards;
