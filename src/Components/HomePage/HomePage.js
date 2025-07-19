@@ -1,8 +1,5 @@
 import React from 'react'
 import "../Styles/home-page.css"
-import { IoPersonOutline, IoSearchOutline } from "react-icons/io5";
-import { HiOutlineShoppingBag } from 'react-icons/hi';
-import { LiaShoppingBagSolid } from 'react-icons/lia';
 import Header from './components/Header';
 import HeroSlider from './components/HeroSlider';
 import Cards from './components/Card';
@@ -12,6 +9,7 @@ import { ProductCard, ProductCard2 } from './components/Product_cards';
 import img1 from "../Assets/Images/img19.jpg"
 import img_1 from "../Assets/Images/img19(1).jpg"
 import img_2 from "../Assets/Images/img19(2).jpg"
+import img_3 from "../Assets/Images/img(2).jpg"
 import img2 from "../Assets/Images/img15.jpg"
 import img2_1 from "../Assets/Images/img15(1).jpg"
 import img3 from "../Assets/Images/img21.jpg"
@@ -38,6 +36,10 @@ import img11 from "../Assets/Images/img3.jpg"
 import img11_1 from "../Assets/Images/img3(1).jpg"
 import img12 from "../Assets/Images/img4.jpg"
 import img12_1 from "../Assets/Images/img4(1).jpg"
+import CTASection from './components/Cta_section';
+import Reviews from './components/Reviews';
+import Brand_logo from './components/Brand_logo';
+import Footer from './components/Footer';
 
 
 const HomePage = () => {
@@ -50,6 +52,7 @@ const HomePage = () => {
 				{ colorCode: 'rgb(212 158 156)', image: img1 },
 				{ colorCode: 'rgb(208 173 129)', image: img_1 },
 				{ colorCode: 'rgb(31 24 28)', image: img_2 },
+				{ colorCode: 'rgb(161 15 26)', image: img_3 },
 			],
 			isPreOrder: true,
 			isOnSale: false,
@@ -69,7 +72,7 @@ const HomePage = () => {
 
 		},
 		{
-			name: "Men's Puffer Jacket",
+			name: "Men's Slim Fit Lightweight Puffer Jacket",
 			image: img3,
 			price: 130,
 			oldPrice: 160,
@@ -203,6 +206,10 @@ const HomePage = () => {
 					))}
 				</div>
 			</div>
+			<CTASection />
+			<Reviews />
+			<Brand_logo />
+			<Footer />
 		</div>
 	</>
 }

@@ -16,10 +16,6 @@ const Cards = () => {
 	return (
 		<section className="top-collections relative max-w-7xl mx-auto">
 			<Cmn_section_title main_title={"Categories"} title_des={"Express your style with our standout collection—fashion meets sophistication."} />
-			{/* <h2 className="title">Categories</h2>
-			<p className="subtitle">
-				Express your style with our standout collection—fashion meets sophistication.
-			</p> */}
 			<div className="collection-grid">
 				{collections.map((item, index) => (
 					<div className="collection-card" key={index}>

@@ -57,12 +57,12 @@ body {
   width: 100%;
 }
 
-h2 {
+.auth-page h2 {
   font-size: 2rem;
   font-weight: 500;
 }
 
-p {
+.auth-page p {
   margin-bottom: 32px;
 }
 

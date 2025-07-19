@@ -14,10 +14,10 @@ const Banner = ({ img }) => {
 					<h4 className="text-[28px] md:text-[38px] font-semibold mb-5 lg:mb-6 leading-[36px] md:leading-[46px]">
 						Classic Winter Collection
 					</h4>
-					<p className='text-black/80 text-[16px] xl:text-[18px]'>
+					<p className='text-black/80 text-[16px] xl:text-[18px] mb-6'>
 						Dignissim lacus, turpis ut suspendisse vel tellus. Turpis purus, gravida orci, fringilla a. Ac sed eu fringilla odio mi. Consequat pharetra at magna imperdiet cursus ac faucibus sit libero. Ultricies quam nunc, lorem sit lorem urna, pretium aliquam ut..
 					</p>
-					<Cmn_btn className={"main-btn main-btn2 max-w-xs"} btn_name={"Shop Collection"} />
+					<Cmn_btn className={"main-btn main-btn2 max-w-xs main-btn2"} btn_name={"Shop Collection"} />
 				</div>
 			</div>
 		</div>

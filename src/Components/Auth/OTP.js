@@ -45,7 +45,7 @@ const Otp = () => {
   };
 
   return (
-    <div className="signin-page roboto-font">
+    <div className="signin-page auth-page">
       <div className="page-bg">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center min-h-screen">
           <div className="signin-overlay">

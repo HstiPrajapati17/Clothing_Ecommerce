@@ -25,16 +25,22 @@ const Header = () => {
 			label: "Pages", menu: "pages", links: [
 				{ label: "About Us", path: "/about" },
 				{ label: "Contacts", path: "/contacts" },
+				{ label: "Privacy Policy", path: "/privacy-policy" },
+				{ label: "Terms & Conditions", path: "/terms-conditions" },
+				{ label: "My Account", path: "/my-account" },
 				{ label: "FAQ", path: "/faq" },
 				{ label: "404 Error", path: "/404" },
 			]
 		},
-		{
-			label: "Shop", menu: "shop", links: [
-				{ label: "Women", path: "/shop/women" },
-				{ label: "Men", path: "/shop/men" },
-			]
-		},
+		{ label: "Shop", path: "/shop" },
+
+		// {
+		// 	label: "Shop", menu: "shop", links: [
+		// 		{ label: "Women", path: "/shop/women" },
+		// 		{ label: "Men", path: "/shop/men" },
+		// 		{ label: "Couple", path: "/shop/couple" },
+		// 	]
+		// },
 		{
 			label: "Blog", menu: "blog", links: [
 				{ label: "Blog Left Side", path: "/blog/left" },
@@ -105,7 +111,7 @@ const Header = () => {
 
 	return (
 		<>
-			<header className='bg-[#d1d5db96]'>
+			<header className='bg-[#e4e6ea]'>
 				<div className='p-4 md:max-w-2xl lg:max-w-4xl xl:max-w-7xl w-full mx-auto'>
 					<div className='flex justify-between items-center'>
 						<div className='logo order-2 md:order-1'>

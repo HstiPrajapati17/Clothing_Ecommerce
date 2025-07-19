@@ -3,9 +3,9 @@ import React from 'react'
 const Bls_Shipping = () => {
 	return (<>
 		<div className="max-w-7xl mx-auto py-4 md:py-12 px-4">
-			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mx-4">
 				{/* Card 1 */}
-				<div className="flex justify-center gap-4">
+				<div className="flex justify-start gap-4">
 					<img
 						src="https://www.svgrepo.com/show/9807/shipping.svg"
 						alt="Free Shipping"
@@ -17,7 +17,7 @@ const Bls_Shipping = () => {
 					</div>
 				</div>
 				{/* Card 2 */}
-				<div className="flex justify-center gap-4">
+				<div className="flex justify-start gap-4">
 					<img
 						src="https://www.svgrepo.com/show/113164/credit-card.svg"
 						alt="Secure Payment"
@@ -29,7 +29,7 @@ const Bls_Shipping = () => {
 					</div>
 				</div>
 				{/* Card 3 */}
-				<div className="flex justify-center gap-4">
+				<div className="flex justify-start gap-4">
 					<img
 						src="https://www.svgrepo.com/show/165538/coin.svg"
 						alt="Money Back"
@@ -41,7 +41,7 @@ const Bls_Shipping = () => {
 					</div>
 				</div>
 				{/* Card 4 */}
-				<div className="flex justify-center gap-4">
+				<div className="flex justify-start gap-4">
 					<img
 						src="https://www.svgrepo.com/show/220411/chat.svg"
 						alt="Support"

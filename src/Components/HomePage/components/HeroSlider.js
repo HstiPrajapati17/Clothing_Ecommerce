@@ -10,7 +10,7 @@ import model4 from "../../Assets/Images/model4.jpg";
 import outfit4 from "../../Assets/Images/outfit4.jpg";
 import model5 from "../../Assets/Images/model5.jpg";
 import outfit5 from "../../Assets/Images/outfit5.jpg";
-import { Cmn_btn } from "../../Assets/cmn_components/Cmn_comp";
+import { Cmn_btn, Cmn_title_btn } from "../../Assets/cmn_components/Cmn_comp";
 
 const slides = [
 	{
@@ -89,7 +89,7 @@ const HeroSlider = () => {
 						<p className="text-gray-700 text-xs sm:text-sm md:text-base mb-4 md:mb-6 px-2 md:px-0">
 							{slide.desc}
 						</p>
-						<Cmn_btn className={"main-btn max-w-xs"} btn_name={"Sign In"} />
+						<Cmn_title_btn className="main-btn max-w-xs" btn_title="Shop Now" link="/shop" />
 					</div>
 				</div>
 			))}
