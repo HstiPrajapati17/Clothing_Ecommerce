@@ -42,6 +42,10 @@ body {
   background-color: black;
   color: #fff;
 }
+.product-list-btn {
+  background-color: #000;
+  color: #fff;
+} 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
   -webkit-text-fill-color: #000000 !important; /* or white if on dark bg */
@@ -62,4 +66,8 @@ input:-webkit-autofill::first-line {
   font-size: 18px;
   color: #555;
   margin-bottom: 40px;
+}
+.checkbox-customed{
+  height: 16px;
+  width: 16px;
 }

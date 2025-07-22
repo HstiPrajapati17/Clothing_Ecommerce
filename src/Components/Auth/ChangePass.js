@@ -72,7 +72,6 @@ const ChangePass = () => {
                     {error}
                   </p>
                 )}
-
                 <button type="submit" className="main-btn">
                   Change Password
                 </button>

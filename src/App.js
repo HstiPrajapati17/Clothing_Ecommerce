@@ -9,6 +9,7 @@ import Otp from "./Components/Auth/OTP";
 import ChangePass from "./Components/Auth/ChangePass";
 import HomePage from "./Components/HomePage/HomePage";
 import ShopPage from "./Components/Shop/Shop";
+import AboutUs from "./Components/Pages/components/AboutUs";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/otp-verify" element={<Otp />} />
       <Route path="/change-pass" element={<ChangePass />} />
       <Route path="/home" element={<HomePage />} />
+      <Route path="/about-us" element={<AboutUs />} />
       <Route path="/shop" element={<ShopPage />} />
 
     </Routes>

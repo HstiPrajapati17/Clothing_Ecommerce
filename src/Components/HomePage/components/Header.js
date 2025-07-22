@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import "../../Styles/home-page.css";
 import { IoPersonOutline, IoSearchOutline, IoClose } from 'react-icons/io5';
-import { LiaShoppingBagSolid } from 'react-icons/lia';
+import { LiaAngleDownSolid, LiaShoppingBagSolid } from 'react-icons/lia';
 import { FaAngleDown, FaBars } from 'react-icons/fa';
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
 		{ label: "HomePage", path: "/home" },
 		{
 			label: "Pages", menu: "pages", links: [
-				{ label: "About Us", path: "/about" },
+				{ label: "About Us", path: "/about-us" },
 				{ label: "Contacts", path: "/contacts" },
 				{ label: "Privacy Policy", path: "/privacy-policy" },
 				{ label: "Terms & Conditions", path: "/terms-conditions" },
@@ -34,13 +34,6 @@ const Header = () => {
 		},
 		{ label: "Shop", path: "/shop" },
 
-		// {
-		// 	label: "Shop", menu: "shop", links: [
-		// 		{ label: "Women", path: "/shop/women" },
-		// 		{ label: "Men", path: "/shop/men" },
-		// 		{ label: "Couple", path: "/shop/couple" },
-		// 	]
-		// },
 		{
 			label: "Blog", menu: "blog", links: [
 				{ label: "Blog Left Side", path: "/blog/left" },
@@ -64,7 +57,7 @@ const Header = () => {
 
 		return (
 			<li key={item.label} className='relative dropdown flex items-center'>
-				<span className='flex items-center cursor-pointer'>{item.label} <FaAngleDown className='ms-1' /></span>
+				<span className='flex items-center cursor-pointer'>{item.label} <LiaAngleDownSolid className='ms-1 text-[14px]' /></span>
 				<ul className='dropdown-menu'>
 					{item.links.map(link => (
 						<li key={link.label}>
