@@ -20,15 +20,15 @@ const Header = () => {
 	};
 
 	const navLinks = [
-		{ label: "HomePage", path: "/home" },
+		{ label: "HomePage", path: "/" },
 		{
 			label: "Pages", menu: "pages", links: [
 				{ label: "About Us", path: "/about-us" },
 				{ label: "Contacts", path: "/contacts" },
 				{ label: "Privacy Policy", path: "/privacy-policy" },
 				{ label: "Terms & Conditions", path: "/terms-conditions" },
-				{ label: "My Account", path: "/my-account" },
-				{ label: "FAQ", path: "/faq" },
+				{ label: "My Account", path: "/signin" },
+				{ label: "FAQs", path: "/faqs" },
 				{ label: "404 Error", path: "/404" },
 			]
 		},

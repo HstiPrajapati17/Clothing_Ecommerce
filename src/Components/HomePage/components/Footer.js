@@ -73,7 +73,7 @@ const Footer = () => {
 							<input
 								type="email"
 								placeholder="Email address"
-								className="flex-grow bg-transparent outline-none text-sm"
+								className="flex-grow bg-transparent outline-none text-sm no-border-bottom"
 							/>
 							<button className="text-black text-lg ml-2">&rarr;</button>
 						</div>

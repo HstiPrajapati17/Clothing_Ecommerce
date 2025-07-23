@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Cmn_btn = ({ btn_name, className }) => {
+export const Cmn_btn = ({ btn_name, className, link }) => {
 	return <>
-		<button type="submit" className={className} >{btn_name}</button>
+		<button type="submit" className={className} >
+			<Link to={link}>
+				{btn_name}
+			</Link>
+		</button>
 	</>
 }
 export const Cmn_title_btn = ({ btn_title, className, link }) => {
