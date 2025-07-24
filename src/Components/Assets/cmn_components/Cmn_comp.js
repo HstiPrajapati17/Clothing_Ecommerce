@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Cmn_btn = ({ btn_name, className, link }) => {
+export const Cmn_btn = ({ btn_name, className, link , onClick}) => {
 	return <>
-		<button type="submit" className={className} >
-			<Link to={link}>
+		<button type="submit" className={className} onClick={onClick} >
+			<Link to={link} >
 				{btn_name}
 			</Link>
 		</button>

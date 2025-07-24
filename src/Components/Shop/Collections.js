@@ -3,8 +3,7 @@ import Header from "../HomePage/components/Header";
 import "../Styles/shop.css";
 import { productsData } from "./Products";
 import { ProductCard, ProductListCard } from "../HomePage/components/Product_cards";
-import { IoClose, IoGridOutline } from "react-icons/io5";
-import { CiBoxList } from "react-icons/ci";
+import { IoClose } from "react-icons/io5";
 import { HiOutlineViewGrid } from "react-icons/hi";
 import { LuLayoutList } from "react-icons/lu";
 
@@ -12,9 +11,9 @@ const categories = ["Men", "Women", "Couple"];
 const priceRanges = ["Under ₹1000", "₹1000 - ₹2000", "Above ₹2000"];
 const colors = ["#141529", "#f1ebdf", "#727c64", "#975c40", "#5d8ea2", "#ac704c", "#c08090", "#94b2ca"];
 const sizes = ["S", "M", "L", "XL", "XXL"];
-const types = ["T-Shirt", "Dress", "Shirt", "Jeans", "Skirt", "Hoodie", "Jacket", "Short"];
+const types = ["T-Shirt", "Dress", "Shirt", "Jeans", "Skirt", "Top", "Jacket", "Short"];
 
-const ShopPage = () => {
+const Collections = () => {
 	const [viewMode, setViewMode] = useState("grid"); // 'grid' or 'list'
 
 	const [selectedFilters, setSelectedFilters] = useState({
@@ -275,5 +274,5 @@ const ShopPage = () => {
 	);
 };
 
-export default ShopPage;
+export default Collections;
 

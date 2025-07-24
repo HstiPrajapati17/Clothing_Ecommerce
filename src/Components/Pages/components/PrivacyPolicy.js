@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
 		<>
 			<div className="font-body text-dark min-h-screen privacy-policy bg-white">
 				<Header />
-
+				
 				{/* Hero Section */}
 				<section className="h-[200px] sm:h-[300px] bg-cover bg-center flex items-center justify-center text-white text-center title-hero-bg">
 					<div className="bg-black/20 w-full h-full flex items-center justify-center">

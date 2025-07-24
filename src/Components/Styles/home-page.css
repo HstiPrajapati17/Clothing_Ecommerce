@@ -34,45 +34,64 @@
 .sidebar-drawer {
   position: fixed;
   top: 0;
-  left: -300px;
+  left: 0;
   width: 280px;
   height: 100%;
-  background: white;
-  transition: left 0.3s ease-in-out;
-  z-index: 999;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;
 }
-
 .sidebar-drawer.open {
-  left: 0;
+  transform: translateX(0);
 }
-
-.sidebar-dropdown .dropdown-submenu {
-  padding-left: 20px;
-  padding-top: 5px;
-  gap: 12px;
-  display: grid;
-}
-
-/* Overlay when sidebar is open */
 .sidebar-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 998;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
 }
 
-/* Cart Badge */
-.cart-item span {
-  position: absolute;
-  top: -6px;
-  right: -7px;
+/* Cart Sidebar */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  transition: right 0.3s ease-in-out;
+  z-index: 1002;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+.cart-sidebar.open {
+  right: 0;
+}
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+}
+.cart-sidebar .btn1 {
+  background: linear-gradient(to top, #111 50%, #fff 50%);
+  background-size: 100% 200%;
+  background-position: bottom;
+  color: #fff;
+  border: 1px solid #747474;
+  transition: background-position 0.4s ease, color 0.4s ease;
+}
+
+.cart-sidebar .btn1:hover {
+  background-position: top;
+  color: #000;
 }
 
 /* hero-slider */

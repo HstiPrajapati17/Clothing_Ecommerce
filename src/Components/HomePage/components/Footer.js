@@ -56,7 +56,7 @@ const Footer = () => {
 								</a>
 							</li>
 							<li>
-								<a href="/contact-us" className="text-base hover:underline transform hover:scale-105 transition-transform duration-200 inline-block">
+								<a href="/contacts" className="text-base hover:underline transform hover:scale-105 transition-transform duration-200 inline-block">
 									Contact Us
 								</a>
 							</li>
@@ -84,7 +84,7 @@ const Footer = () => {
 				{/* Copyright Section */}
 				<div className="border-t border-gray-700 mt-8 pt-4 text-center">
 					<p className="text-sm">
-						&copy; {new Date().getFullYear()} Your Company. All rights reserved.
+						Copyright &copy; {new Date().getFullYear()} StyleVerse. All rights reserved.
 					</p>
 				</div>
 			</div>
