@@ -56,7 +56,7 @@ const Footer = () => {
 								</a>
 							</li>
 							<li>
-								<a href="/contact-us" className="text-base hover:underline transform hover:scale-105 transition-transform duration-200 inline-block">
+								<a href="/contacts" className="text-base hover:underline transform hover:scale-105 transition-transform duration-200 inline-block">
 									Contact Us
 								</a>
 							</li>

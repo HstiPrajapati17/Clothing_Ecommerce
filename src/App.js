@@ -16,12 +16,12 @@ import PrivacyPolicy from "./Components/Pages/components/PrivacyPolicy";
 import TermsAndCondition from "./Components/Pages/components/TermsAndCondition";
 import Faqs from "./Components/Pages/components/Faqs";
 import Error404 from "./Components/Pages/components/Error404";
+import ProductSingle from "./Components/Shop/ProductSingle";
+import Checkout from "./Components/Shop/Checkout";
+import Blog from "./Components/Blog/Blog";
 
 // Styles
 import "./Components/Styles/cmn-css.css";
-import ProductSingle from "./Components/Shop/ProductSingle";
-import Checkout from "./Components/Shop/Checkout";
-import BlogLeftSide from "./Components/Blog/BlogLeftSide";
 
 function App() {
   return (
@@ -35,6 +35,7 @@ function App() {
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-conditions" element={<TermsAndCondition />} />
       <Route path="/faqs" element={<Faqs />} />
+      <Route path="/404" element={<Error404 />} />
 
       {/* Auth Pages */}
       <Route path="/signin" element={<SignIn />} />
@@ -43,14 +44,13 @@ function App() {
       <Route path="/otp-verify" element={<Otp />} />
       <Route path="/change-pass" element={<ChangePass />} />
 
-      {/* 404 Page */}
-      <Route path="/404" element={<Error404 />} />
       {/* shop pages */}
       <Route path="/shop/collections" element={<Collection />} />
       <Route path="/shop/product-single" element={<ProductSingle />} />
       <Route path="/shop/checkout" element={<Checkout />} />
+
       {/* blog pages */}
-      <Route path="/blog/left" element={<BlogLeftSide />} />
+      <Route path="/blog" element={<Blog />} />
 
     </Routes>
   );

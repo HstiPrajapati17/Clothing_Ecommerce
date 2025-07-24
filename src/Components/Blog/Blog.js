@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from '../HomePage/components/Header';
 import Footer from '../HomePage/components/Footer';
+import { BiSolidCommentDetail } from 'react-icons/bi';
 
-const BlogLeftSide = () => {
+const Blog = () => {
 	const blogs = [
 		{
 			id: 1,
@@ -62,45 +63,41 @@ const BlogLeftSide = () => {
 						{/* Blog List */}
 						<div className="lg:col-span-2 space-y-10">
 							{blogs.map(blog => (
-								<div key={blog.id} className="flex flex-col md:flex-row gap-6">
-									<img src={blog.image} alt="Blog" className="w-full md:w-64 h-48 object-cover rounded" />
+								<div key={blog.id} className="flex flex-col sm:flex-row gap-6">
+									<img src={blog.image} alt="Blog" className="w-full sm:w-64 h-60 sm:h-48 object-cover rounded" />
 									<div>
-										<p className="text-sm text-gray-400 uppercase">{blog.date} &nbsp; {blog.admin} &nbsp; 💬 {blog.comments}</p>
+										<p className="text-sm text-gray-400 uppercase flex justify-start items-center">{blog.date} &nbsp; {blog.admin} &nbsp; <BiSolidCommentDetail className='me-1' /> {blog.comments}</p>
 										<h2 className="text-xl font-semibold mt-2 mb-2 text-gray-800 hover:text-black cursor-pointer">{blog.title}</h2>
 										<p className="text-gray-600 mb-3">{blog.desc}</p>
-										<button className="bg-black/90 text-white text-sm px-4 py-2 rounded hover:bg-black">Read more</button>
+										<button className="bg-black/80 text-white text-sm px-4 py-2 rounded-full hover:bg-black">Read more</button>
 									</div>
 								</div>
 							))}
 						</div>
-
 						{/* Sidebar */}
 						<div className="space-y-10">
 							<div>
 								<input type="text" placeholder="Type a keyword and hit enter" className="w-full border border-gray-300 px-4 py-2 rounded" />
 							</div>
-
 							<div>
 								<h3 className="text-lg font-semibold mb-2">Categories</h3>
 								<ul className="space-y-2 text-gray-600">
-									<li>Bags (12)</li>
-									<li>Shoes (22)</li>
+									<li>T-shirt (12)</li>
+									<li>Jackets (22)</li>
 									<li>Dress (37)</li>
-									<li>Accessories (14)</li>
-									<li>Makeup (42)</li>
-									<li>Beauty (140)</li>
+									<li>Shirts (14)</li>
+									<li>Tops (140)</li>
+									<li>Shorts (42)</li>
 								</ul>
 							</div>
-
 							<div>
 								<h3 className="text-lg font-semibold mb-2">Tag Cloud</h3>
 								<div className="flex flex-wrap gap-2">
-									{["Shop", "Products", "Shirt", "Jeans", "Shoes", "Dress", "Coats", "JumpSuits"].map(tag => (
+									{["Shop", "Products", "Shirt", "Jeans", "T-shirt", "Dress", "Tops", "Jackets"].map(tag => (
 										<span key={tag} className="text-lg bg-gray-200 px-3 py-1 rounded cursor-pointer hover:bg-gray-300">{tag}</span>
 									))}
 								</div>
 							</div>
-
 							<div>
 								<h3 className="text-lg font-semibold mb-2">Paragraph</h3>
 								<p className="text-md text-gray-600">
@@ -118,4 +115,4 @@ const BlogLeftSide = () => {
 	);
 };
 
-export default BlogLeftSide;
+export default Blog;
