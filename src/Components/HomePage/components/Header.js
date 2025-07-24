@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import "../../Styles/home-page.css";
 import { IoPersonOutline, IoSearchOutline, IoClose } from 'react-icons/io5';
 import { LiaAngleDownSolid, LiaShoppingBagSolid } from 'react-icons/lia';
@@ -8,6 +8,8 @@ import { FaAngleDown, FaBars } from 'react-icons/fa';
 const Header = () => {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 	const [openDropdown, setOpenDropdown] = useState("");
+	const [cartOpen, setCartOpen] = useState(false);
+	const [searchOpen, setSearchOpen] = useState(false);
 
 	const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 	const closeSidebar = () => {
@@ -18,6 +20,9 @@ const Header = () => {
 	const toggleDropdown = (menu) => {
 		setOpenDropdown(prev => (prev === menu ? "" : menu));
 	};
+
+	const toggleCart = () => setCartOpen(!cartOpen);
+	const toggleSearch = () => setSearchOpen(prev => !prev);
 
 	const navLinks = [
 		{ label: "HomePage", path: "/" },
@@ -32,13 +37,18 @@ const Header = () => {
 				{ label: "404 Error", path: "/404" },
 			]
 		},
-		{ label: "Shop", path: "/shop" },
-
+		{
+			label: "Shop", menu: "shop", links: [
+				{ label: "Collections", path: "/shop/collections" },
+				{ label: "Product Single", path: "/shop/product-single" },
+				{ label: "Checkout", path: "/shop/checkout" },
+			]
+		},
 		{
 			label: "Blog", menu: "blog", links: [
 				{ label: "Blog Left Side", path: "/blog/left" },
 				{ label: "Blog Right Side", path: "/blog/right" },
-				{ label: "Blog Full Side", path: "/blog/full" },
+				{ label: "Blog Fullwidth", path: "/blog/full" },
 			]
 		},
 		{ label: "Contacts", path: "/contacts" }
@@ -54,7 +64,6 @@ const Header = () => {
 				</li>
 			);
 		}
-
 		return (
 			<li key={item.label} className='relative dropdown flex items-center'>
 				<span className='flex items-center cursor-pointer'>{item.label} <LiaAngleDownSolid className='ms-1 text-[14px]' /></span>
@@ -70,7 +79,6 @@ const Header = () => {
 			</li>
 		);
 	};
-
 	const renderSidebarItem = (item) => {
 		if (!item.menu) {
 			return (
@@ -81,7 +89,6 @@ const Header = () => {
 				</li>
 			);
 		}
-
 		return (
 			<li key={item.label} className='sidebar-dropdown'>
 				<div className='dropdown-toggle flex items-center justify-between' onClick={() => toggleDropdown(item.menu)}>
@@ -104,7 +111,7 @@ const Header = () => {
 
 	return (
 		<>
-			<header className='bg-[#e4e6ea]'>
+			<header className='bg-[#e4e6ea] relative z-50'>
 				<div className='p-4 md:max-w-2xl lg:max-w-4xl xl:max-w-7xl w-full mx-auto'>
 					<div className='flex justify-between items-center'>
 						<div className='logo order-2 md:order-1'>
@@ -122,17 +129,27 @@ const Header = () => {
 								</ul>
 							</nav>
 						</div>
-
 						<div className='header-right flex justify-center items-center gap-3 sm:gap-6 text-[22px] order-3'>
-							<div className='search'><IoSearchOutline /></div>
-							<div className='user-info'><IoPersonOutline /></div>
-							<div className='cart-item relative'>
+							<div className='search cursor-pointer' onClick={toggleSearch}><IoSearchOutline /></div>
+							<div className='user-info'><Link to={"/signin"}><IoPersonOutline /></Link></div>
+							<div className='cart-item relative cursor-pointer' onClick={toggleCart}>
 								<LiaShoppingBagSolid />
 								<span className='text-[10px] text-white bg-red-600 rounded-full h-4 w-4 flex justify-center items-center absolute -top-2 -right-2'>2</span>
 							</div>
 						</div>
 					</div>
 				</div>
+				{/* Search Bar */}
+				{searchOpen && (
+					<div className="absolute top-full right-[10%] w-[320px] bg-white shadow-lg px-4 py-3 flex items-center gap-3 z-40">
+						<input
+							type="text"
+							placeholder="Search products..."
+							className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none"
+						/>
+						<IoClose className="text-2xl cursor-pointer" onClick={toggleSearch} />
+					</div>
+				)}
 			</header>
 
 			{/* Sidebar for Mobile */}
@@ -147,6 +164,35 @@ const Header = () => {
 			</div>
 
 			{sidebarOpen && <div className="sidebar-overlay" onClick={closeSidebar}></div>}
+
+			{/* Cart Sidebar */}
+			<div className={`cart-sidebar ${cartOpen ? 'open' : ''}`}>
+				<div className="cart-header flex justify-between items-center border-b p-4">
+					<h3 className="text-lg font-semibold">Your Cart</h3>
+					<IoClose className="text-xl cursor-pointer" onClick={toggleCart} />
+				</div>
+				<div className="cart-content p-4 overflow-y-auto">
+					<div className="flex justify-between mb-3">
+						<div className='img'>
+							<img />
+						</div>
+						<div>
+							<p className="font-medium">T-Shirt</p>
+							<p className="text-sm text-gray-500">Qty: 1</p>
+						</div>
+						<p>$19.99</p>
+					</div>
+					<div className="flex justify-between mb-3">
+						<div>
+							<p className="font-medium">Jeans</p>
+							<p className="text-sm text-gray-500">Qty: 2</p>
+						</div>
+						<p>$49.99</p>
+					</div>
+				</div>
+			</div>
+
+			{cartOpen && <div className="cart-overlay" onClick={toggleCart}></div>}
 		</>
 	);
 };

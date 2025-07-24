@@ -9,7 +9,7 @@ import ForgetPass from "./Components/Auth/ForgetPass";
 import Otp from "./Components/Auth/OTP";
 import ChangePass from "./Components/Auth/ChangePass";
 import HomePage from "./Components/HomePage/HomePage";
-import ShopPage from "./Components/Shop/Shop";
+import Collection from "./Components/Shop/Collections";
 import AboutUs from "./Components/Pages/components/AboutUs";
 import Contacts from "./Components/Pages/components/Contacts";
 import PrivacyPolicy from "./Components/Pages/components/PrivacyPolicy";
@@ -19,6 +19,9 @@ import Error404 from "./Components/Pages/components/Error404";
 
 // Styles
 import "./Components/Styles/cmn-css.css";
+import ProductSingle from "./Components/Shop/ProductSingle";
+import Checkout from "./Components/Shop/Checkout";
+import BlogLeftSide from "./Components/Blog/BlogLeftSide";
 
 function App() {
   return (
@@ -26,7 +29,6 @@ function App() {
       {/* Main Pages */}
       <Route path="/" element={<HomePage />} />
       <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/shop" element={<ShopPage />} />
 
       {/* Other Informational Pages */}
       <Route path="/contacts" element={<Contacts />} />
@@ -43,6 +45,13 @@ function App() {
 
       {/* 404 Page */}
       <Route path="/404" element={<Error404 />} />
+      {/* shop pages */}
+      <Route path="/shop/collections" element={<Collection />} />
+      <Route path="/shop/product-single" element={<ProductSingle />} />
+      <Route path="/shop/checkout" element={<Checkout />} />
+      {/* blog pages */}
+      <Route path="/blog/left" element={<BlogLeftSide />} />
+
     </Routes>
   );
 }

@@ -89,7 +89,7 @@ const HeroSlider = () => {
 						<p className="text-gray-700 text-xs sm:text-sm md:text-base mb-4 md:mb-6 px-2 md:px-0">
 							{slide.desc}
 						</p>
-						<Cmn_title_btn className="main-btn max-w-xs" btn_title="Shop Now" link="/shop" />
+						<Cmn_title_btn className="main-btn max-w-xs" btn_title="Shop Now" link="/shop/collections" />
 					</div>
 				</div>
 			))}

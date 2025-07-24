@@ -30,8 +30,20 @@
 .shop-container {
   flex-direction: row;
 }
-.product-list-card .main-btn{
+.product-list-card .main-btn {
   width: 240px;
+}
+.checkout-page input {
+  padding: 9px 0px 6px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+}
+.checkout-page textarea{
+  border: 1px solid #000;
+  width: 100%;
 }
 /* Responsive Styles */
 @media (max-width: 1280px) {
