@@ -6,8 +6,6 @@ import Header from '../HomePage/components/Header';
 import { Cmn_btn, Cmn_section_title } from '../Assets/cmn_components/Cmn_comp';
 import Footer from '../HomePage/components/Footer';
 import { FaStar } from "react-icons/fa";
-
-
 import img1 from "../Assets/Images/skirt1.jpg"
 import img_1 from "../Assets/Images/skirt2.jpg"
 import img2 from "../Assets/Images/shirt.jpg"

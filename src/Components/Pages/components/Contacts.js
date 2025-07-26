@@ -112,7 +112,7 @@ const Contacts = () => {
 			<section className="py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto bg-light-beige">
 				<h2 className="font-display text-3xl font-medium text-center mb-8 text-dark">Find Us on the Map</h2>
 				<div className="w-full h-80 bg-gray-300 rounded-lg overflow-hidden shadow-md">
-					{/* Placeholder for an embedded map (e.g., Google Maps iframe) */}
+					
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.1666873523173!2d72.82283437435474!3d21.222718180479134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04fca031d2e1f%3A0x7d6a5c1a7d6e6f9!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1701764834212!5m2!1sen!2sin"
 						width="100%"

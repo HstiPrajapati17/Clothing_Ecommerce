@@ -10,7 +10,7 @@ const SignIn = () => {
 
   const [errors, setErrors] = useState({});
   const [checked, setChecked] = useState(false);
-  const navigate = useNavigate(); // ✅ For redirect
+  const navigate = useNavigate(); 
 
   const toggleCheckbox = () => {
     setChecked(!checked);
@@ -49,7 +49,6 @@ const SignIn = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form submitted", formData);
-      // ✅ Redirect after successful validation
       navigate("/home");
     }
   };
