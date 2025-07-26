@@ -9,7 +9,7 @@ const ForgetPass = () => {
 
   const handleChange = (e) => {
     setEmail(e.target.value);
-    setError(""); // Clear error while typing
+    setError(""); 
   };
 
   const validateEmail = (email) => {

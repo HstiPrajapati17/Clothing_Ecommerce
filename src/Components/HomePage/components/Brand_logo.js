@@ -10,7 +10,6 @@ import dockers from "../../Assets/Images/Dockers.png";
 import ZARA from "../../Assets/Images/zara.png";
 import louisVuitton from "../../Assets/Images/louis-vuitton.png";
 import H_M from "../../Assets/Images/H&M.png";
-import { a } from "framer-motion/client";
 
 const brandLogos = [
 	chanel,
@@ -29,10 +28,10 @@ const Brand_logo = () => {
 		infinite: true,
 		speed: 500,
 		arrows: false,
-		slidesToShow: 6, // Show 2 slides at a time
+		slidesToShow: 6, 
 		slidesToScroll: 1,
-		autoplay: true, // Enable automatic sliding
-		autoplaySpeed: 2000, // Slide every 2 seconds
+		autoplay: true, 
+		autoplaySpeed: 2000,
 		responsive: [
 			{
 				breakpoint: 1024,

@@ -1,6 +1,6 @@
 import React from "react";
-import "../../Styles/home-page.css"; // Optional if you're adding external CSS
-import "../../Styles/cmn-css.css"; // Optional if you're adding external CSS
+import "../../Styles/home-page.css";
+import "../../Styles/cmn-css.css";
 import { Cmn_btn } from "../../Assets/cmn_components/Cmn_comp";
 
 const CTASection = () => {

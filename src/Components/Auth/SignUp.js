@@ -48,7 +48,7 @@ const SignUp = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form submitted:", formData);
-      navigate("/"); // Redirect to sign-in or home
+      navigate("/"); 
     }
   };
 
