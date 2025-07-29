@@ -210,6 +210,15 @@ const HomePage = () => {
 			<Reviews />
 			<Brand_logo />
 			<Footer />
+			<div className="flex justify-end">
+				<button
+					onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+					className="fixed bottom-6 h-[50px] w-[50px] right-6 bg-gray-800 text-white p-3 text-xl rounded-full shadow hover:bg-gray-700 transition"
+					title="Back to top"
+				>
+					↑
+				</button>
+			</div>
 		</div>
 	</>
 }
